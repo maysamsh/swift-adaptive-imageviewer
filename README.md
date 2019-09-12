@@ -9,19 +9,19 @@ The way it works is simple, creates an `UIScrollView` programmatically, disables
 
 ```swift
 override func viewWillLayoutSubviews() {
-super.viewWillLayoutSubviews()
-if let image = UIImage(named: "image.jpg") {
-scrollView.contentSize = image.size
-imageView.image = image
-let minZoom = min(self.view.bounds.size.width / image.size.width, self.view.bounds.size.height / image.size.height)
-self.scrollView.minimumZoomScale = minZoom
-
-DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-let vertical = (self.view.bounds.size.height - (image.size.height * minZoom)) / 2
-self.scrollView.contentInset = UIEdgeInsets(top: vertical, left: 0, bottom: vertical, right: 0)
-self.scrollView.setZoomScale(minZoom, animated: true)
-}
-}
+    super.viewWillLayoutSubviews()
+    if let image = UIImage(named: "image.jpg") {
+        scrollView.contentSize = image.size
+        imageView.image = image
+        let minZoom = min(self.view.bounds.size.width / image.size.width, self.view.bounds.size.height / image.size.height)
+        self.scrollView.minimumZoomScale = minZoom
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            let vertical = (self.view.bounds.size.height - (image.size.height * minZoom)) / 2
+            self.scrollView.contentInset = UIEdgeInsets(top: vertical, left: 0, bottom: vertical, right: 0)
+            self.scrollView.setZoomScale(minZoom, animated: true)
+        }
+    }
 }
 ```
 for the rest of the code, read it yourself.
