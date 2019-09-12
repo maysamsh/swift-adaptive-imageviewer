@@ -1,5 +1,5 @@
 # swift-adaptive-imageviewer
-_An adaptive solution to fit the image within the screen using a UIScrollView and AutoLayout, programatically._
+_An adaptive solution to fit an image within the screen using a UIScrollView and AutoLayout, programatically._
 
 ![adaptive-imageviewer](https://i.imgur.com/eI7pQaE.gif)
 
