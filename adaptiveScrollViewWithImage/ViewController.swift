@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     let scrollView = UIScrollView()
-    let contentView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +38,6 @@ class ViewController: UIViewController {
     
     func setupScrollView(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.delegate = self
         
@@ -53,7 +51,6 @@ class ViewController: UIViewController {
     }
     
     func setupViews(){
-        contentView.backgroundColor = UIColor.red
         scrollView.addSubview(imageView)
     }
     
